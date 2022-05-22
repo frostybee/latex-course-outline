@@ -1,0 +1,339 @@
+% !TeX encoding = UTF-8
+% !TeX spellcheck = en_US
+\documentclass[11pt, a4paper]{article}
+
+% The title of the current document to be produced.
+\newcommand{\doctitle}{Course Outline}
+\newcommand{\labactivities}{\bluetext{\textbf{Lab:} activities covering discussed topics.}}
+%
+\setlength{\unitlength}{1in}
+\renewcommand{\arraystretch}{2}
+
+%------------------------------------------------------------
+% Import commands for both teacher and course information.  | 
+% NOTE: Change your teacher and course info in these files. |
+%------>------>------>------>------>------>------>------>-->|
+\input{includes/teacher-info}                              %|
+\input{includes/course-info}                               %|   
+%
+%------------------------------------------------------------
+%-- Import packages and custom command definitons.          |
+%------>------>------>------>------>------>------>------>-->|
+\input{includes/packages-imports}                          %|  
+\input{includes/custom-commands}   
+%
+%---> Genereate & inject metadata                           |
+\input{includes/hyperef.doc.info}                          %|
+%------------------------------------------------------------
+
+\topmargin -70pt
+\begin{document} 
+
+%-------------------------------------------------------------
+%-- Make the header of the document                          |
+%------>------>------>------>------>------>------>------>--> |
+\input{includes/document-header}
+  
+%-------------------------------------------------------------
+%-- Insert the course & teacher info                         |
+%------>------>------>------>------>------>------>------>--> |
+\hrule     
+\vspace{.5cm}
+\begin{multicols}{1}
+    \begin{description}[labelindent=0.02in,leftmargin=1.25in,style=nextline]
+        %--> First column:         
+        \item[\textsc{Section}:] \csection
+        \item[\textsc{Ponderation}:] \raggedright\ponderation
+        \item[\textsc{Prerequisites}:] \prerequisite
+        \item[] 
+        %--> Second column:         
+        \item[\textsc{Teacher}:] \instructor
+        \item[\textsc{Office}:]  {\color{darkred}\office}
+        \item[\textsc{Phone}:]\phone
+        \item[\textsc{E-mail}:] \email
+        \item[\textsc{Office Hours}:] \hours
+        \item[] 
+    \end{description}
+\end{multicols}
+\hrule        
+\vspace{.2cm}
+
+ %--------  Course Description  ------------------------------
+\customsection{Course Description}  
+\noindent \blindtext
+
+\customsection{Key Learning Outcomes} 
+
+\begin{borderedsquare}
+     \setlength\itemsep{0.3em}        
+	\item This is a first objective 
+	\item This is a second objective 
+	\item This is a third objective 
+	\item And forth
+	\item And fifth
+\end{borderedsquare}
+        
+%\clearpage    
+
+\customsection{Course-Level Learning Outcome} 
+\noindent The following is a list of course-level learning outcomes.  
+
+\begin{filledstarlist}
+	\item Outcome 1
+	\item Outcome 2
+	\item Outcome 3
+	\item Outcome 4
+	\item Outcome 5
+\end{filledstarlist}
+
+\clearpage
+\customsection{Required Background and Prerequisite Knowledge}
+\noindent The practical programming components of this course require the use of the C\# programming language and .NET Framework. Therefore, students are required to have a reasonably solid knowledge of C\#/.NET. Much of the material covered in Programming I \& II as well as Programming Patterns is directly relevant for this course, therefore, it is critical that students understand and remember the knowledge they acquired in previous courses. Some of the essential concepts that students should know well to do well in this course include, but not limited, to the following:
+%\begin{itemize}[itemsep=5pt,parsep=0pt,topsep=4pt,partopsep=3pt]
+\begin{greenrectangles}
+	\item Core principles of Object-Oriented Programming (OOP) 
+	\item Event-driven programming model: generating and handling events in a GUI context 
+	%     XML and JSON
+	\item Common data structures such as list, array, hash map, stack, queue, etc. 
+   \item Version-control system and management of changes to files in a collaborative environment
+\end{greenrectangles}
+
+
+\customsection{Grading scheme}    
+%--------------------------------------------------------------   
+% Evaluation Table                                            |
+%--> NOTE: the following mindmap was produced using Freeplane | 
+%   @see: https://www.freeplane.org/wiki/index.php/Home       |   
+%------>------>------>------>------>------>------>------>---->|
+\begin{figure}[htbp]
+    \centering                   
+    \includegraphics[scale=0.47]{includes/mindmap/A21-Evaluation-420-408.png}
+    \vspace{-1.3cm}
+    \caption*{
+        \small\textit{
+            \textbf{\underline{Note:}}
+            For a tabular format of this grading scheme, refer to Section \ref{sec:eval-procudures} that is listed in the Appendix below.
+        }
+    } 
+\end{figure}
+    
+\noindent \textsc{\large\textbf{Notes and Constraints}}
+\vspbpara
+\begin{arrows}
+\item In order to pass the course, students must....
+\item Late work is not accepted unless prior arrangement with the teacher...
+\item Assignments are demonstrated in-class as part of the marking process to provide feedback before exams. 
+\item Students will be informed of the exact date of each test at least one week in advance.
+\end{arrows}
+
+\clearpage
+
+\customsection{Textbooks and Course Materials}  
+%---------------------------------
+%--> List of recommended textbooks. 
+\begin{itemize}[itemsep=4pt,parsep=0pt,topsep=1pt,partopsep=1pt]
+	\item[\color{darkblue}\faNewspaperO] \textbf{\textsc{Online Resources:}}
+	Lecture notes, APIs documentation and online Web tutorials will be provided to students throughout the semester.  \\
+	\noindent \textbf{Using Omnivox:} Throughout the semester, students will use Omnivox to download material, upload deliverable files, and obtain all course information.
+		
+	\item[\color{darkblue}\faBook] \textbf{\textsc{textbook:}} There is no required textbook for this course. However, the following is a list of textbooks that are strongly recommended for this course:\\
+\end{itemize}
+
+\hrule
+\vspace{.2cm}
+\begin{minipage}[b]{0.17\linewidth}          
+	\includegraphics[width=.95\linewidth]{includes/images/unity-in.action.jpg}
+\end{minipage}\hfill
+\begin{minipage}[b]{0.75\linewidth}          
+	\noindent \textbf{Title:} Unity in Action: Multiplatform game development in C\#, 2nd Edition \\
+	\textbf{Author:} Joseph Hocking \\
+	\textbf{Publisher:} Manning Publications, publication year: 2018  \\
+	\textbf{ISBN-13:} 978-1617294969\\         
+	\textbf{Available at:}     \href{https://www.manning.com/books/unity-in-action-second-edition}{Manning Publications},
+	\href{https://www.amazon.ca/Unity-Action-Multiplatform-game-development/dp/1617294969}{Amazon}
+	 and other vendors. 
+	 \\
+\end{minipage}
+\vspace{.18cm}
+\hrule
+\vspace{.1cm}
+\begin{minipage}[b]{0.17\linewidth}          
+	\includegraphics[width=.95\linewidth]{includes/images/UnityCookbook.jpg}
+\end{minipage}\hfill
+\begin{minipage}[b]{0.75\linewidth}          
+	\noindent \textbf{Title:} C\# Game Programming Cookbook for Unity 3D, 2nd Edition \\
+	\textbf{Author:} Jeff W. Murray \\
+	\textbf{Publisher:} CRC Press; publication year: 2021  \\
+	\textbf{ISBN-13:} 978-0367321642\\         
+	\textbf{Available at:}     
+	\href{https://www.amazon.ca/dp/0367321645/}{Amazon},
+	and other vendors. \\
+\end{minipage}
+\\
+\hrule
+\vspace{.1cm}
+\begin{minipage}[b]{0.17\linewidth}          
+	\includegraphics[width=.95\linewidth]{includes/images/learningUnityCSharp.jpg}
+\end{minipage}\hfill
+\begin{minipage}[b]{0.75\linewidth}          
+	\noindent \textbf{Title:} Learning C\# Programming with Unity 3D, 1st Edition \\
+	\textbf{Author:} Alex Okita \\
+	\textbf{Publisher:} A K Peters/CRC Press; publication year: 2014  \\
+	\textbf{ISBN-13:} 978-1498760201\\         
+	\textbf{Available at:}     
+	\href{https://www.amazon.ca/Learning-C-Programming-Unity-3D/dp/1466586524/}{Amazon},
+	and other vendors. \\
+\end{minipage}
+
+%--------  Required Software and Material ------------------------------
+\vspace{.4cm}
+
+\customsection{Required Software and Tools }  
+\begin{itemize}[itemsep=2pt,parsep=0pt,topsep=2pt,partopsep=2pt]
+	%    \item[\color{darkblue}\faCoffee] Java 7 or 8 (32 or 64 bits)
+	\item[\color{darkblue}\faLaptopCode] \textbf{Operating system:} \faWindows {} Windows  10,  \faLinux {} Linux, \textcolor{vanierred}{\textbf{or}} \faApple {} macOS 
+	\item[\color{darkblue}\faCode] \textbf{IDE \& Game Engine:} \faUnity Unity \textcolor{vanierred}{2020.3 (LTS)} \textcolor{darkblue}{\&} Visual Studio \textcolor{vanierred}{2019} (Community Edition)
+	\item [{\color{darkblue}\faChrome}] \textbf{Web Browser:} Google Chrome.   
+	\item[{\color{darkblue} \faWpforms}] Markdown for writing documentation.
+	\item[{\color{darkblue} \faGitSquare}] Distributed version control system.
+	\item[{\color{darkblue} \faBitbucket}] Bitbucket: a web-based version control repository hosting service.
+	\item[{\color{darkblue} \faTrello}] Trello: a Web-based project management system.
+	
+	\item[\color{darkblue}\faUsb]
+	A storage medium (a USB flash memory or any online free storage service such as GDrive or OneDrive) for storing and backing up your files. 
+	\item[\color{darkblue}\faInfoCircle]
+	If you want to work at home on your assignments, students must install and use the \textbf{same versions} of the required software that are installed in our labs. \\
+\end{itemize}   
+
+
+
+ \clearpage
+\noindent {\color{darkred} \bfseries\Large\scshape Course Policies} 
+\customsection{Class Policy and Rules of Conduct} 
+\begin{itemize}[itemsep=2.5pt,parsep=0pt,topsep=8pt,partopsep=4pt]
+	\item[{ \color{darkblue} \faLaptop}] Laptops are \underline{strictly prohibited} in classroom during the lectures and labs. 
+	
+	\item[{\huge \color{darkblue} \faMobile}] 
+	\textbf{Cell phones strictly prohibited during classes and labs}. Electronic devices must be turned off (\faBellSlashO) and placed in your bags (not on the desk just in front of you). 
+	\item[{\large \color{darkblue} \faHeadphones}] 
+	\textbf{Headphones} should be removed all the time.            
+	\item[{\color{darkblue} \faEdit}] \textbf{During lectures}, students must turn off their monitors and take notes. Using the computer during lectures without authorization is strictly not allowed. 
+	\item[{\color{darkblue} \faMicrophoneSlash}] 
+	Video or audio recordings and taking photographs are NOT permitted. 
+	\item[{\color{darkblue} \faWechat}] 
+	Persistent talking, whispering or any disruptive attitude will not be tolerated.
+\end{itemize}
+
+\vspace{0.5cm}
+\customsection{Appendix }  
+\hrule 
+\vspbpara 
+ 
+\customsection{Evaluation Procedures}    
+\label{sec:eval-procudures}
+    \begin{itemize}[itemsep=8pt,parsep=0pt,topsep=3pt,partopsep=4pt]
+    \item[]
+%    \begin{center}
+        \renewcommand{\arraystretch}{1.5} % this reduces the vertical spacing between rows    
+        \begin{tabular}{lcl}
+            \thead{\color{darkblue} Course Component} & \thead{\color{darkblue} Overall Weight} & \thead{\color{darkblue}Tentative Period} \\ 
+            %---s Load the table body: dynamic table content.        
+       \hline    
+            \textbf{Individual Homework} &   &   \\                         
+                   \hline    
+		\textit{Assignment}  &  20\% &  Week 2-7 \\                           
+         \textit{In-class labs}  &  10\% &  Week 1-11 \\                           
+          \hline    
+        \textbf{Exam} &   &   \\                         
+           \hline
+            \textit{Theoretical exam} &  15\% &  Week 7 \\               
+            \textit{Lab exam} &  15\% &  Week 8 \\               
+            \hline
+           \textbf{LIA} &   &   \\                         
+		\hline
+			\textit{Team project} & 40\% & Week 2 to 15 \\               
+        \hline
+
+
+        \end{tabular}
+        \vspace{-1em}
+%    \end{center} 
+    %        \evaluationrules
+\end{itemize}  
+\clearpage
+
+\customsection{Tentative Course Content}
+%TODO: split implementation into 3 builds.
+\renewcommand{\arraystretch}{1.5} % this reduces the vertical spacing between rows    
+\noindent\begin{tabular}{|p{1cm}|p{15cm}|}
+	\hline
+	\thead{\color{darkblue} Week} & \thead{\color{darkblue}Topics \& Homework} \\ 
+	\hline
+	%---s Load the table body: dynamic table content.        
+	\textbf{1} &   Course outline discussion \& team Project Guidelines    \\
+	& \labactivities \\
+	\hline    
+%	 Week 2
+	\textbf{2} & Topics... \\
+		& \labactivities \\
+	& \redtext{\textbf{Announcement:...} Assignment \#1}\\
+\hline    
+%	 Week 3
+	\textbf{3} &  Topics... 
+	\\
+	& \labactivities { }\redtext{Team project proposal due.}\\ 
+\hline
+%	 Week 4	
+	\textbf{4} & Topics... \\
+    & \labactivities { }\redtext{Game Design Document due.}\\
+\hline
+%	 Week 5	
+\textbf{5} & Topics...
+\\
+& \labactivities { } \redtext{Team project proposal presentations.}\\
+\hline
+%	 Week 6	
+\textbf{6} & Topics...\\
+\hline
+%	 Week 7	
+\textbf{7} & Review for exam. \redtext{Assignment due.}
+\\
+\hline
+%	 Week 8	
+\textbf{8} & \textbf{Exam} \& work on team project.
+\\
+
+\hline
+%	 Week 9
+\textbf{9} & Topics...\\
+	\hline
+%	 Week 10
+\textbf{10} & Topics...\\
+& \redtext{Build \#1 due.}\\
+  \hline
+%	 Week 11
+\textbf{11} & Topics...\\
+& \redtext{TCR Checklist due.} \\
+ \hline
+ %	 Week 12
+\textbf{12} & Topics...\\
+& \redtext{Build \#2 due.}\\
+ \hline
+ %	 Week 13
+
+ \textbf{13} & Work on team project.\\
+\hline 
+ %	 Week 14
+\textbf{14} &  Playtesting session. \\
+& \redtext{Build \#3 due.}\\
+\hline  
+ %	 Week 15
+\textbf{15} & Final project demonstrations. Peer review due. \\
+& \redtext{QA testing report \& user guide due.}\\
+\hline  
+\end{tabular}   
+
+\vspace{1cm}
+\noindent \textcolor{red}{\textbf{\underline{NOTE:}}} The above actual dates may be modified due to the requirements of the class. Also, the indicated dates may be moved backward or forward depending on class progress. \textbf{Exact dates and instructions will be announced on course webpage}. 
+
+\end{document} 

@@ -1,0 +1,29 @@
+%---------------------------------------------------------------------
+%-- The following produces the document header including the title.  |
+%---------------------------------------------------------------------
+
+\noindent % <-- need to have this first.
+\begin{minipage}{.40\textwidth}
+    %- Here we insert the institution info: college and department name.    
+	{\color{darkred} \faSchool} { \textsc{\college}}{ } {\color{darkred} \faSchool}\\ 
+	\small\textsc{ Faculty of Science \& Technology}\\%
+	\small\textsc{Computer Science Technology}
+\end{minipage}%
+\hfill	
+\begin{minipage}{0.60\textwidth}%
+	\raggedleft%
+	{\Large \textsc{\doctitle}\par}
+	\doublerule 
+\end{minipage}%
+\vspace{0.9cm}
+{
+%- Here we insert the course info: that is, the course number and title.    
+	\centering
+	\vspace{.2cm}
+	\customhrule{0.5pt}
+	{\scshape 
+		\Large \coursenumber { } \coursetitle {}
+		 \\
+		\small\textsc{\semester}\par}
+	\vspace{.3cm}
+}

@@ -12,17 +12,12 @@ It features Font Awesome, dingbat lists as well as a mindmap that illustrates a 
 - Custom dingbat lists.
 - Course schedule table.
 
-# Instructions
-Modify your instructor and course info 
+## Mind Map
+The mind map was created using [Freeplane](https://www.freeplane.org/wiki/index.php/Home).
+The source file is located in `src/mindmap/`
 
-```
-course-info.tex
-```
-and 
-```
-teacher-info.tex
-```
-respectively.
+## Instructions
+Modify your instructor and course info in `src/includes/course-info.tex ` and `src/includes/teacher-info.tex` respectively.
 
 ## Screenshots
 The layout of the document header.
